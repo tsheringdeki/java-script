@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Variable declaration with let keyword </title>
+</head>
+<body>
+  <script>
+     function test() {
+        let bool = true;
+        if (bool) {
+           let x = 30; //block scoped variable
+           const z = 50; //block scoped variable
+           var y = 40; //global scoped variable
+           document.write("x = " + x + ", y = " + y + ", z = " + z + "<br/>");
+        }
+         // y can be accessible here
+       document.write("y = " + y + "<br/>");
+
+
+        // x can't be accessible here
+        document.write("x = " + x + "<br/>");
+       }
+     test();
+  </script>
+</body>
+</html>
