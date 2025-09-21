@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Data Types Demo</title>
+</head>
+<body>
+ <h2>JavaScript Data Types Example</h2>
+ <div id="results"></div>
+
+
+ <script>
+   // A helper function to print to the page
+   function print(message) {
+     const resultsDiv = document.getElementById("results");
+     const p = document.createElement("div");
+     p.className = "output";
+     p.textContent = message;
+     resultsDiv.appendChild(p);
+   }
+
+
+   // --- Primitive Data Types ---
+   let str = "Hello, JavaScript!"; // String
+   document.write("String: " + str + "<br/>");
+
+
+   let num = 42; // Number
+   let pi = 3.14159; // floating point number
+   document.write("Number: " + num + " and " + pi + "<br/>");
+
+
+   let isStudent = true; // Boolean
+   let isTeacher = false; // Boolean
+   document.write("Boolean: " + isStudent + ", " + isTeacher + "<br/>");
+
+
+   let emptyValue = null;
+   document.write("Null: " + emptyValue + "<br/>");
+
+
+   let notAssigned;
+   document.write("Undefined: " + notAssigned + "<br/>");
+
+
+   let bigNumber = 1234567890123456789012345678901234567890n;
+   document.write("BigInt: " + bigNumber + "<br/>");
+
+
+   let sym1 = Symbol("id"); // Create a symbol
+   let sym2 = Symbol("id");
+   document.write("Symbol 1: " + sym1.toString() + "<br/>"); // Convert symbol to string for display
+   document.write("Symbol 2: " + sym2.toString() + "<br/>");
+   document.write("Are sym1 and sym2 equal? " + (sym1 === sym2) + "<br/>");
+
+
+   // --- Non-Primitive (Object) ---
+   let student = {
+     name: "Tashi",
+     age: 21,
+     isEnrolled: true,
+     scores: [85, 90, 78],
+     address: {
+       city: "Thimphu",
+       country: "Bhutan"
+     }
+   }; // Create an object
+
+
+   document.write("Object: " + JSON.stringify(student) + "<br/>"); //Convert object to string for display
+
+
+   document.write("Student Name: " + student["name"] + "<br/>");
+   document.write("Student Age: " + student["age"] + "<br/>");
+   document.write("City: " + student.address.city + "<br/>");
+   document.write("First Score: " + student.scores[0] + "<br/>");
+ </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<head>
+  <title> JavaScript Symbol </title>
+</head>
+<body>
+  <script>
+     let sym1 = Symbol("123");
+     let sym2 = Symbol("123");
+     let res = sym1 === sym2;
+     document.write("Is sym1 and Sym2 are same? " + res + "<br/>");
+  </script>
+</body>
+</html> -->
