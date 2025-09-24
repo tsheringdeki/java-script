@@ -1,0 +1,17 @@
+NOTE: 
+Run the following code in the web browser by inserting it in a HTML file.  
+
+
+
+function showData(name, amt) {    
+  alert(' Hello ' + name + '\n Your are saving ' + amt);    
+}    
+
+function getData(callback) {    
+  var name = prompt(" Welcome! \n What is your name? ");    
+  var amt = prompt(" Enter the amount you wish to save.");    
+  callback(name, amt);    //callback === showData
+}    
+    
+getData(showData);		//calling back the function
+
